@@ -1,5 +1,6 @@
 namespace ASPLab4.Migrations.IdentityMigrations
 {
+    using Controllers;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -28,6 +29,12 @@ namespace ASPLab4.Migrations.IdentityMigrations
             //    );
             //
 
+            context.Provinces.AddOrUpdate(
+                p => p.ProvinceCode, DummyData.getProvinces().ToArray());
+            context.SaveChanges();
+
+            context.Cities.AddOrUpdate(
+                p => new { p.CityId, p.CityName }, DummyData.getCities(context).ToArray());
             
         }
     }
