@@ -24,6 +24,11 @@ namespace ASPLab4.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        
+        public DbSet<Province> Provinces { get; set; }
+        public DbSet<City> Cities { get; set; }
+
+        //Database.SetInitializer(new DropCreateDatabaseAlways<ApplicationDbContext>());
 
         public static ApplicationDbContext Create()
         {
