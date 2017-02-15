@@ -10,7 +10,7 @@ namespace ASPLab4.Migrations.IdentityMigrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             MigrationsDirectory = @"Migrations\IdentityMigrations";
         }
 
