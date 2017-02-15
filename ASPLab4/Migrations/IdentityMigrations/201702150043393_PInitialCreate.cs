@@ -5,8 +5,8 @@ namespace ASPLab4.Migrations.IdentityMigrations
     
     public partial class PInitialCreate : DbMigration
     {
-        //public override void Up()
-        //{
+        public override void Up()
+        {
         //    CreateTable(
         //        "dbo.Cities",
         //        c => new
@@ -97,7 +97,7 @@ namespace ASPLab4.Migrations.IdentityMigrations
         //        .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
         //        .Index(t => t.UserId);
             
-        //}
+        }
         
         public override void Down()
         {
